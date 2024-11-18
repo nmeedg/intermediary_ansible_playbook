@@ -1,0 +1,21 @@
+---
+# tasks file for roles/users
+
+- name: Creating user for devops
+  user:
+    append: yes
+    name: devops
+    password: "{{ 'edg' | password_hash('sha512') }}"
+    groups: vagrant
+    shell: /bin/bash
+
+- name: Add user devops to sudoers
+  copy:
+    dest: "/etc/sudoers.d/devops"
+    content: "devops ALL=(ALL) NOPASSWD:ALL"
+
+- name: Add local key to authorized keys for user devops
+  authorized_key:
+    key: "{{ lookup('file','/tmp/node_ssh_key.pub') }}"
+    user: devops
+    state: present

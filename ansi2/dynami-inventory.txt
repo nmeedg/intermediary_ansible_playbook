@@ -1,0 +1,215 @@
+    1  clear
+    2  ls
+    3  git --version
+    4  exit
+    5  clear
+    6  ls
+    7  ls /
+    8  clear
+    9  ls
+   10  ls /
+   11  clear
+   12  ls /
+   13  clear
+   14  exit
+   15  clear
+   16  ls :tmp
+   17  ls /tmp
+   18  clear
+   19  ssh vagrant@node1
+   20  ls
+   21  cd /vagrant/
+   22  ls
+   23  cd ansi/
+   24  ls
+   25  cd ..
+   26  ls
+   27  mkdir ansi2
+   28  clear
+   29  ls
+   30  cp ansi/inventory.yml ansi2/
+   31  cp ansi/host_vars/ ansi2/
+   32  cd ansi2/
+   33  ls
+   34  clear
+   35  ls
+   36  cat inventory.yml 
+   37  ansible-doc get_url
+   38  ansible-doc unarchive
+   39  cear
+   40  clear
+   41  ls
+   42  touch playbook.yml
+   43  ls
+   44  wget https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_linux_amd64.zip
+   45  clear
+   46  ls
+   47  vi playbook.yml 
+   48  cat playbook.yml 
+   49  ansible-playbook -i inventory.yml playbook.yml 
+   50  ls
+   51  ls /tmp
+   52  ansible-playbook -i inventory.yml playbook.yml 
+   53  vi playbook.yml 
+   54  ls
+   55  cp /tmp/nodejs.tar.xz ~/adddons/
+   56  ls ~/adddons/
+   57  rm -r ~/adddons/awesome-vimrc/
+   58  rm -r ~/adddons/awesome-vimrc[A[B
+   59  sudo rm -r ~/adddons/awesome-vimrc
+   60  ls ~/adddons/
+   61  clear
+   62  ansible-playbook -i inventory.yml playbook.yml 
+   63  cat playbook.yml 
+   64  ls
+   65  ssh vagrant@node1&
+   66  ssh vagrant@node1
+   67  ls
+   68  clear
+   69  ls
+   70  touc 01_playbook.yml 
+   71  touch 01_playbook.yml 
+   72  lx
+   73  clear
+   74  ls
+   75  ansible-doc lineinfile
+   76  cat /etc/sudoers
+   77  sudo cat /etc/sudoers
+   78  clear
+   79  ssh vagrant@node1
+   80  ls
+   81  ansible-doc lineinfile
+   82  clear
+   83  ls
+   84  vi 01_playbook.yml 
+   85  ansible-playbook -i inventory.yml 01_playbook.yml 
+   86  vi 01_playbook.yml 
+   87  ansible-playbook -i inventory.yml 01_playbook.yml 
+   88  ssh vagrant@node1
+   89  vi 01_playbook.yml 
+   90  ansible-playbook -i inventory.yml 01_playbook.yml 
+   91  ssh vagrant@node1
+   92  clear
+   93  ls
+   94  vi 02_playbook.yml 
+   95  ansible-playbook -i inventory.yml 02_playbook.yml 
+   96  vi 02_playbook.yml 
+   97  ansible-playbook -i inventory.yml 02_playbook.yml 
+   98  vi 02_playbook.yml 
+   99  ansible-playbook -i inventory.yml 02_playbook.yml 
+  100  vi 02_playbook.yml 
+  101  ansible-playbook -i inventory.yml 02_playbook.yml 
+  102  vi 02_playbook.yml 
+  103  ansible-playbook -i inventory.yml 02_playbook.yml 
+  104  clear
+  105  ls
+  106  ls -la
+  107  vi 02_playbook.yml 
+  108  ansible-playbook -i inventory.yml 02_playbook.yml 
+  109  clear
+  110  ls
+  111  vi 02_playbook.yml 
+  112  clear
+  113  ls
+  114  ansible-playbook -i inventory.yml 02_playbook.yml 
+  115  clear
+  116  ls
+  117  cd 
+  118  ls
+  119  cd .ssh/
+  120  ls
+  121  vi id_ecdsa.pub 
+  122  vi authorized_keys 
+  123  clear
+  124  ssh vagrant@master
+  125  cd ..
+  126  ls
+  127  sudo systemctl restart ssh
+  128  cd /vagrant/
+  129  ls
+  130  cd ansi2
+  131  ls
+  132  ansible-playbook -i inventory.yml 02_playbook.yml 
+  133  vi 02_playbook.yml 
+  134  cat ~/.ssh/authorized_keys 
+  135  cvi ~/.ssh/authorized_keys 
+  136  vi ~/.ssh/authorized_keys 
+  137  vi ~/.ssh/id_ecdsa
+  138  vi ~/.ssh/id_ecdsa.pub 
+  139  vi ~/.ssh/authorized_keys 
+  140  sudo systemctl restart ssh
+  141  clear
+  142  ansible-playbook -i inventory.yml 02_playbook.yml 
+  143  ansible --version
+  144  clear
+  145  ansible --version
+  146  clear
+  147  ls
+  148  cat 02_playbook.yml 
+  149  touch 03_playbook.yml 
+  150  ls
+  151  clear
+  152  ls
+  153  clear
+  154  ansible-doc yri
+  155  ansible-doc uri
+  156  clear
+  157  ansible-doc command
+  158  ansible-doc shell
+  159  clear
+  160  ansible-doc synchronize
+  161  clear
+  162  ls
+  163  cat 07_playbook.yml 
+  164  cleaar
+  165  clear
+  166  ping 192.168.56.1
+  167  ls
+  168  clear
+  169  ls
+  170  sudo vi /etc/ansible/ansible.cfg 
+  171  ls
+  172  sudo ls /etc/ansible/
+  173  ansible-inventory -i inventory.yml playbook.yml 
+  174  ansible-inventory -i inventory.yml --graph
+  175  clear
+  176  nmap
+  177  clear
+  178  ansible-doc -t inventory.yml -l
+  179  ansible-doc -t inventory -l
+  180  clear
+  181  sudo nmap
+  182  apt install nmap
+  183  sudo apt install nmap -y
+  184  cat /etc/hosts
+  185  sudo vi /etc/hosts
+  186  clear
+  187  ls
+  188  nmap --version
+  189  clear
+  190  sudo nmap -v -n -p- -sT -sV --osscan-limit --max-os-tries 1 -oX $HOME/home_scan.xml 192.168.56.0/24
+  191  clear
+  192  ls
+  193  touch nmap.yml
+  194  ls
+  195  clear
+  196  ls
+  197  vim nmap.yml 
+  198  clear
+  199  ls
+  200  ansible-inventory -i nmap.yml --list
+  201  cat /etc/host
+  202  cat /etc/hosts
+  203  ansible-inventory -i nmap.yml --list --yaml
+  204  cat /etc/hosts
+  205  clear
+  206  ls
+  207  ansible -i nmap.yml all -m ping
+  208  cat nmap.yml 
+  209  clear
+  210* ansible-doc inventory -l 
+  211  ansible-doc -t inventory -l
+  212  ansible-doc -t inventory nmap
+  213  clear
+  214  ansible -i nmap.yml all -m ping
+  215  history >> dynami-inventory.txt

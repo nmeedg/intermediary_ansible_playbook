@@ -1,0 +1,28 @@
+---
+# tasks file for roles/nginx
+
+- name: install nginx
+  apt:
+    cache_valid_time: 8600
+    name: nginx
+    state: latest
+    update_cache: yes
+
+- name: Clean default nginx file
+  shell: "sudo rm -rf /var/www/html/*"
+
+- name: Add custom nginx default page
+  template:
+    backup: yes
+    dest: "/var/www/html/index.html"
+    src: "index.html.j2"
+  notify: nginx_reload
+
+- name: Started nginx
+  systemd:
+    enabled: yes
+    name: nginx
+    state: started
+
+- name: flush handlers
+  meta: flush_handlers

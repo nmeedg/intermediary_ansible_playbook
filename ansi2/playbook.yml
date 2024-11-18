@@ -1,0 +1,29 @@
+- name: get nodejs on local
+  remote_user: vagrant
+  become: yes
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: get archive of node
+      get_url:
+        backup: yes
+        dest: /tmp/nodejs.tar.xz
+        url: https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz
+        validate_certs: false
+
+- name: Install nodejs on remote
+  remote_user: vagrant
+  become: yes
+  hosts: webserver
+  tasks:
+    - name: Create neccessary directory
+      file:
+        state: directory
+        path: /tmp/nodejs
+        recurse: yes
+
+    - name: "copy node js to remote"
+      unarchive:
+        src: /tmp/nodejs.tar.xz
+        dest: /tmp/nodejs
+

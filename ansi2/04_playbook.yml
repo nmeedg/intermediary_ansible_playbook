@@ -1,0 +1,21 @@
+- name: Test uri module in Ansible
+  remote_user: vagrant
+  hosts: webserver
+  tasks:
+    - name: "Test GET request"
+      uri:
+        url: "https://jsonplaceholder.typicode.com/posts/1"
+        method: GET
+        validate_certs: no
+        return_content: yes
+        body_format: json
+      register: _http_res
+    - name: Debug value
+      debug:
+        var: _http_res.json
+    - name: Check status request
+      uri:
+        url: "https://httpbin.org/status/404"
+        method: GET
+        validate_certs: no
+        status_code: 404

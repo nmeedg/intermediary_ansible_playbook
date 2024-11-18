@@ -1,0 +1,87 @@
+    1  clear
+    2  ls
+    3  git --version
+    4  exit
+    5  clear
+    6  ls
+    7  ls /
+    8  clear
+    9  ls
+   10  ls /
+   11  clear
+   12  ls /
+   13  clear
+   14  exit
+   15  clear
+   16  ansible-doc get_url
+   17  clear
+   18  ls
+   19  cd /vagrant/
+   20  ls
+   21  cd ansi2/
+   22  ls
+   23  cat playbook.yml
+   24  vi playbook.yml 
+   25  ansible-doc unarchive
+   26  clear
+   27  ls
+   28  cat inventory.yml 
+   29  cat playbook.yml 
+   30  ansible-doc lineinfile
+   31  cat /etc/sudoers
+   32  sudo cat /etc/sudoers
+   33  clear
+   34  vi 01_playbook.yml 
+   35  ansible-doc lineinfile
+   36  vi 01_playbook.yml 
+   37  ansible-playbook -i inventory.yml 01_playbook.yml 
+   38  vi 01_playbook.yml 
+   39  ansible-playbook -i inventory.yml 01_playbook.yml 
+   40  vi 01_playbook.yml 
+   41  ansible-playbook -i inventory.yml 01_playbook.yml 
+   42  vi 01_playbook.yml 
+   43  ansible-playbook -i inventory.yml 01_playbook.yml 
+   44  vi 01_playbook.yml 
+   45  ansible-playbook -i inventory.yml 01_playbook.yml 
+   46  vi 01_playbook.yml 
+   47  ansible-playbook -i inventory.yml 01_playbook.yml 
+   48  ansible-doc lineinfile
+   49  vi 01_playbook.yml 
+   50  ansible-playbook -i inventory.yml 01_playbook.yml 
+   51  vi 01_playbook.yml 
+   52  ansible-playbook -i inventory.yml 01_playbook.yml 
+   53  vi 01_playbook.yml 
+   54  ansible-playbook -i inventory.yml 01_playbook.yml 
+   55  vi 01_playbook.yml 
+   56  ansible-playbook -i inventory.yml 01_playbook.yml 
+   57  ansible-doc lineinfile
+   58  vi 01_playbook.yml 
+   59  ansible-playbook -i inventory.yml 01_playbook.yml 
+   60  ls
+   61  vi 01_playbook.yml 
+   62  ansible-playbook -i inventory.yml 01_playbook.yml 
+   63  vi 01_playbook.yml 
+   64  ansible-playbook -i inventory.yml 01_playbook.yml 
+   65  clear
+   66  ansible-playbook -i inventory.yml 01_playbook.yml 
+   67  vi 01_playbook.yml 
+   68  ansible-playbook -i inventory.yml 01_playbook.yml 
+   69  clear
+   70  vi 01_playbook.yml 
+   71  ansible-playbook -i inventory.yml 01_playbook.yml 
+   72  cat 01_playbook.yml 
+   73  vi 01_playbook.yml 
+   74  clear
+   75  cd
+   76  clear
+   77  docker-engine
+   78  clear
+   79  ls
+   80  ansible-doc apt_key
+   81  ansible-doc apt_repository
+   82  clear
+   83  history
+   84  cd /vagrant
+   85  ls
+   86  history >> .
+   87  history >> history.txt

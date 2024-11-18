@@ -1,0 +1,15 @@
+- name: Testing Gather facts
+  become: yes
+  gather_facts: no
+  hosts: dbserver
+  remote_user: vagrant
+  tasks:
+    - name: Test connectivity
+      ping:
+    - name: Custom gather facts
+      setup:
+        filter: "ansible_hos*"
+      register: _host_facts
+    - name: debug fact
+      debug:
+        var: _host_facts       

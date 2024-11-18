@@ -1,0 +1,28 @@
+- name: Module lineinfile
+  hosts: webserver
+  remote_user: vagrant
+  become: yes
+  tasks:
+    - name: using lineinfile module
+      lineinfile:
+        backup: yes
+        create: yes
+        backrefs: yes
+        state: absent
+        regex: "(Edgard)$"
+        path: "/tmp/test.md"
+
+    - name: Modify default port of nginx
+      lineinfile:
+        backup: yes
+        backrefs: yes
+        firstmatch: yes
+        state: present
+        path: "/etc/nginx/sites-available/default"
+        line: "\tlisten 8080 default_server;"
+        regex: "^(\\s+)listen (\\d+)"
+    - name: restart nginx daemon
+      systemd:
+        name: nginx
+        state: restarted
+

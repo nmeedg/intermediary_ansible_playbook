@@ -1,0 +1,16 @@
+- name: Command and shell module test
+  hosts: webserver
+  become: yes
+  tasks:
+    - name: command exemple
+      shell: cat /etc/hosts | grep 127
+      #command:
+        #        cmd: ls
+        # argv:
+        # - ls
+        # - -larth
+        #chdir: "/etc"
+      register: _output
+    - name: Debug info of output
+      debug:
+        var: _output

@@ -1,0 +1,18 @@
+- name: Learning set facts in ansible
+  remote_user: vagrant
+  hosts: webserver
+  vars:
+    var1: "Hello world"
+    var2: "Bonjour a tous"
+  tasks:
+    - name: test shell
+      shell: "echo $USER"
+      register: _output
+    - name: define set facts
+      set_fact:
+        monfact: "{{var1}} {{var2}} {{_output.stdout}}²"
+
+    - name: debug vars
+      debug:
+        var: monfact
+

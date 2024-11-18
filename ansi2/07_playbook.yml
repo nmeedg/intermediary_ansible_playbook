@@ -1,0 +1,18 @@
+- name: Assamble script for unique configuration file
+  remote_user: vagrant
+  become: yes
+  hosts: webserver
+  tasks:
+    - name: Ceate  neccessary  dir
+      file:
+        state: directory
+        path: "/tmp/config"
+        recurse: yes
+
+    - name: Assemble files
+      assemble:
+        dest: /tmp/config/devit.conf
+        src: /tmp/devit
+        remote_src: no
+        delimiter: "# === another configuration section ==="
+

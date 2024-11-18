@@ -1,0 +1,19 @@
+- name: configure environment variables
+  become: yes
+  remote_user: vagrant
+  vars_prompt:
+    - name: "version"
+      prompt: "Entrer le nom de variable ? "
+      default: "dev"
+  hosts: webserver
+  environment:
+    VERSION: "{{version}}"
+  tasks:
+    - name: checking variables
+      shell: "echo Hello $VERSION"
+      register: _output
+      changed_when: _output.rc != 0
+    - name: Debugging variable
+      debug:
+        var: _output
+

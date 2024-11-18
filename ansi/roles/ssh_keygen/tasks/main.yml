@@ -1,0 +1,9 @@
+---
+# tasks file for roles/ssh_keygen
+
+- name: Generating ssh keys for network connection
+  openssh_keypair:
+    path: /tmp/node_ssh_key
+    state: present
+    type: rsa
+    size: 2048
